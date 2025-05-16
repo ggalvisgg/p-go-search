@@ -14,26 +14,8 @@ import (
 
 
 type BookRepository struct {
-    collection *mongo.Collection
+    //collection *mongo.Collection
 }
-
-func NewBookRepository() *BookRepository {
-    mongoURI := os.Getenv("MONGO_URI")
-    if mongoURI == "" {
-        log.Fatal("MONGO_URI not set in environment")
-    }
-
-    clientOptions := options.Client().ApplyURI(mongoURI)
-    client, err := mongo.Connect(context.TODO(), clientOptions)
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    collection := client.Database("library").Collection("books")
-    return &BookRepository{collection}
-}
-
-
 
 // repositories/book_repository.go
 func (r *BookRepository) GetAllBooks() ([]models.Book, error) {
