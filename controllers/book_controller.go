@@ -6,7 +6,7 @@ import (
     "github.com/gorilla/mux"
     "example.com/go-mongo-app/models"
     "example.com/go-mongo-app/services"
-    "go.mongodb.org/mongo-driver/bson/primitive"
+    //"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type BookController struct {
