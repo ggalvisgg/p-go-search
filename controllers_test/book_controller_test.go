@@ -1,4 +1,4 @@
-package controllers
+package controllers_test
 
 import (
     "net/http"
@@ -8,6 +8,7 @@ import (
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/mock"
 
+    "example.com/go-mongo-app/controllers"
     "example.com/go-mongo-app/models"
 )
 
@@ -26,7 +27,7 @@ func (m *MockBookService) GetBooks() ([]models.Book, error) {
 
 func TestGetBooks_Success(t *testing.T) {
     mockService := new(MockBookService)
-    controller := NewBookController(mockService)
+    controller := controllers.NewBookController(mockService)
 
     books := []models.Book{
         {Title: "Book 1", Author: "Author 1", ISBN: "1111111111"},
@@ -43,3 +44,4 @@ func TestGetBooks_Success(t *testing.T) {
     assert.Equal(t, http.StatusOK, resp.Code)
     mockService.AssertExpectations(t)
 }
+
