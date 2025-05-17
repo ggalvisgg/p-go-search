@@ -10,7 +10,7 @@ services:
 
   mongodb:
     image: mongo:latest
-    container_name: mongo - search
+    container_name: mongo-search
     ports:
       - "27017:27017"
     volumes:
