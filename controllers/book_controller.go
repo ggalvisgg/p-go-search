@@ -27,4 +27,5 @@ func (c *BookController) GetBooks(w http.ResponseWriter, r *http.Request) {
         "message": "Libros obtenidos correctamente",
         "books":   books,
     })
+    //nuevo coment
 }
