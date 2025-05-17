@@ -19,7 +19,7 @@ services:
 
   cronjob:
     build: ./mongo-cron
-    container_name: mongo-backup
+    container_name: mongo-backup-search
     depends_on:
       - mongodb
     volumes:
