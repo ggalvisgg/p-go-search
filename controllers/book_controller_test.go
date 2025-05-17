@@ -22,7 +22,7 @@ func (m *MockBookService) GetBooks() ([]models.Book, error) {
     return args.Get(0).([]models.Book), args.Error(1)
 }
 
-// ---------------------- TEST ----------------------
+// ---------------------- TESTS ----------------------
 
 func TestGetBooks_Success(t *testing.T) {
     mockService := new(MockBookService)
