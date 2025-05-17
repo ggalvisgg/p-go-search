@@ -1,19 +1,16 @@
 package controllers
 
 import (
-	"bytes"
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
-	"net/http"
-	"net/http/httptest"
-	"testing"
+    "net/http"
+    "net/http/httptest"
+    "testing"
 
-	"example.com/go-mongo-app/models"
-	"example.com/go-mongo-app/repositories"
-	"example.com/go-mongo-app/services"
-	"github.com/gorilla/mux"
-	"github.com/stretchr/testify/assert"
+    "example.com/go-mongo-app/repositories"
+    "example.com/go-mongo-app/services"
+    "example.com/go-mongo-app/controllers"
+
+    "github.com/gorilla/mux"
+    "github.com/stretchr/testify/assert"
 )
 
 func setupRouter() *mux.Router {
